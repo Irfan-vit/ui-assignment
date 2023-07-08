@@ -1,0 +1,42 @@
+
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.abokichi.com/cdn/shop/files/Abokichi_Hero_banner_3c68d178-a505-4394-bbda-7a0756a6401f.png");
+  
+    /* Set a specific height */
+    height: 50vh;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    >a >button{
+        padding: 1rem;
+        background-color: #FF8636;
+        cursor: pointer;
+        font-weight: var(--font-weight-bold);
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: white;
+    }
+    >p{
+        font-weight: var(--font-weight-bold);
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+    }
+    >h1{
+        font-family: 'Raleway', sans-serif;
+        font-weight: var(--font-weight-bold);
+    }
+  }
