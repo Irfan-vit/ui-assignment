@@ -1,0 +1,109 @@
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+}
+.footer-links{
+    background-color: #EBF2EF;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    >ul{
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
+    @media (min-width: 550px) {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+
+.links,.info{
+    margin-top: 1rem;
+    list-style: none;
+    flex-basis: 50%;
+    display: flex;
+    gap: 7%;
+    flex-flow: column wrap;
+    justify-content: first baseline;
+    align-items: flex-start;
+    align-content: center;
+    >li > a{
+        text-decoration: none;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 18px;
+        font-weight: var(--font-weight-regular);
+        color: #565858;
+    }
+    >li > h4{
+        text-decoration: none;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 22px;
+        font-weight: var(--font-weight-regular);
+        color: #0C3322;
+    }
+}
+
+.info{
+    align-content: flex-start;
+    @media (max-width:768px) {
+        align-content: flex-end;
+    }
+    @media (max-width:500px) {
+        align-content: center;
+    }
+}
+
+.footer-nav{
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    @media (max-width:500px) {
+        flex-flow: column wrap;
+    }
+}
+
+.payments{
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 3%;
+    @media (max-width:500px) {
+        justify-content: center;
+    }
+
+}
+
+.footer-social{
+    background-color: #0C3322;
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: var(--font-weight-regular);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    >ul{
+        display: flex;
+        list-style: none;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        gap: 30%;
+        >li >img{
+            height: 24px;
+            width: 24px;
+        }
+    }
+    @media (max-width:500px) {
+        flex-flow: column wrap;
+        >ul{
+            justify-content: center;
+        }
+    }
+}

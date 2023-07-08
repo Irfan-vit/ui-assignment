@@ -1,0 +1,20 @@
+.img-container{
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    >div{
+        height: 250px;
+        width: 250px;
+        flex-basis: 25%;
+    }
+    >h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-weight: var(--font-weight-semi-bold);
+    }
+}

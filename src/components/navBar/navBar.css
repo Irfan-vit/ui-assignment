@@ -1,0 +1,253 @@
+.nav-bar{
+    display: flex;
+    flex-flow: row nowrap;
+    >div:nth-child(1){
+        order: 2;
+        flex-basis: 50%;
+    }
+    >div:nth-child(2){
+        flex-basis: 25%;
+        min-width: 30px;
+        display: block;
+        order: 1;
+        >.nav-links {
+            display: none;
+        }
+    }
+    >div:nth-child(3){
+        flex-basis: 25%;
+        order: 3;
+        min-width:115px;
+    }
+    @media (min-width:500px) {
+    flex-flow: row wrap;
+    >div:nth-child(1){
+        flex-basis: 50%;
+        max-height: 80px;
+        order: 2;
+    }
+    >div:nth-child(2){
+        display: block;
+        flex-basis: 25%;
+        order: 1;
+        >.nav-links {
+            display: none;
+        }
+    }
+    >div:nth-child(3){
+        flex-basis: 25%;
+        order: 3;
+    }
+}
+    @media (min-width:992px) {
+        >div:nth-child(1){
+            flex-basis: 15%;
+            order:1;
+        }
+        >div:nth-child(2){
+            flex-basis: 70%;
+            order:2;
+            display: block;
+            >.nav-links {
+                display: flex;
+            }
+        }
+        >div:nth-child(3){
+            flex-basis: 15%;
+            order:3;
+        }
+    }
+}
+
+.logo-img-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.logo-img-container > img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+}
+
+.nav-header{
+    position: relative;
+}
+.toggle-menu{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    >span {
+        scale: 1.2;
+    }
+    @media (min-width:992px) {
+        display: none;
+    }
+}
+.side-toggle{
+    overflow: hidden;
+    position: fixed;
+    top: 35px;
+    left: -60vw;
+    height: 100%;
+    width: 60vw;
+    background-color: white;
+    z-index: 2;
+    display: block;
+    transition: all 0.3s ease;
+    @media (min-width:500px) {
+        left: -30vw;
+        width: 30vw;
+    }
+
+    @media (min-width:992px) {
+        left: -20vw;
+        width: 20vw;
+    }
+}
+
+.side-toggle:target {
+    display: block;
+    left: 0;
+}
+
+.side-toggle:hover {
+    display: block;
+}
+
+.back-drop{
+    position: fixed;
+    top: 35px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.307);
+    z-index: 1;
+    display: none;
+}
+
+.side-toggle:target + .back-drop{
+    display: block;
+}
+
+.nav-links{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:3%;
+    height: 100%;
+}
+
+.nav-links > li >button:hover,.nav-links > li >div:hover {
+    text-decoration: underline;
+}
+
+.nav-links > li > button,.shop-toggle{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: var(--font-weight-semi-bold);
+    color: #000000;
+    background: transparent;
+    cursor: pointer;
+}
+.nav-links > li > a {
+text-decoration: none;
+color:black;
+}
+.nav-links > li > a > span{
+    font-size: 35px;
+    font-weight: var(--font-weight-semi-bold);
+    cursor: pointer;
+}
+
+.shop-toggle{
+    display: flex;
+}
+
+.shop{
+    position: relative;
+}
+
+.shop-links{
+    list-style: none;
+    background-color: white;
+    position: absolute;
+    display: none;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.shop-toggle:focus + .shop-links,.shop-links:hover{
+    display: block;
+}
+
+.nav-icons{
+    position: relative;
+}
+.search-toggle{
+    position: fixed;
+    right: -90vw;
+    width: 90vw;
+    background-color: white;
+    z-index: 2;
+    height: 100%;
+    display: block;
+    transition: all 0.3s ease;
+    @media (min-width:500px) {
+        right: -70vw;
+        width: 70vw;
+    }
+    @media (min-width:700px) {
+        right: -60vw;
+        width: 60vw;
+    }
+    @media (min-width:992px) {
+        right: -50vw;
+        width: 50vw;
+    }
+}
+.search-toggle:target{
+    display: block;
+    right: 0;
+}
+.back-drop-search{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.307);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    display: none;
+}
+.search-toggle:target + .back-drop-search{
+    display: block;
+}
+
+.mobile{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    align-items:flex-start;
+    gap: 6%;
+    margin-top: 2rem;
+}
+
+.toggle-close{
+    position: absolute;
+    right: 0;
+    color: #000000;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 18px;
+    scale: 1.2;
+}

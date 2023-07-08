@@ -1,0 +1,44 @@
+.user-utils-bar{
+    color: white;
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 35px;
+    padding: 0 30px;
+}
+
+.utils-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.utils-list >li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    >span:nth-child(1){
+        scale: 0.7;
+        font-weight: 700;
+    }
+}
+
+.currency{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--font-weight-medium);
+}
+
+.currency > option {
+    color: black;
+}
